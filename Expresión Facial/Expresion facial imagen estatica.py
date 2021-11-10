@@ -15,4 +15,7 @@ with mp_face_mesh.FaceMesh(
         max_num_faces = 1,
         min_detection_confidence = 0.5) as face_mesh:
     
-    imagen = cv2.imshow("CR7");
+    image = cv2.imread("leonmessibarca111.jpg")
+    cv2.imshow("Image", image)
+    cv2.waitKey(0)
+cv2.destroyAllWindows()
