@@ -14,6 +14,10 @@ ceja_izq = [70, 63, 105, 66, 107]
 ceja_der = [336, 296, 334, 293, 300]
 labio_sup = [184, 74, 73, 72, 11, 302, 303, 304, 408]
 labio_inf = [77, 90, 180, 85, 16, 315, 404, 320, 307]
+parpados_sup = [246, 161, 160, 159, 158, 157, 173, 
+                398, 384, 385, 386, 387, 388, 466]
+parpados_inf = [7, 163, 144, 145, 153, 154, 155,
+                382, 381, 380, 374, 373, 390, 249]
 
 with mp_face_mesh.FaceMesh(
         static_image_mode = True,
@@ -48,6 +52,16 @@ with mp_face_mesh.FaceMesh(
                 x = int(face_landmarks.landmark[index].x * width)
                 y = int(face_landmarks.landmark[index].y * height)
                 cv2.circle(image, (x,y), 2, (0,0,255), 2)
+            '''Parpado superior'''
+            for index in parpados_sup:
+                x = int(face_landmarks.landmark[index].x * width)
+                y = int(face_landmarks.landmark[index].y * height)
+                cv2.circle(image, (x,y), 2, (255,0,0), 2)
+            '''Parpado inferior'''
+            for index in parpados_inf:
+                x = int(face_landmarks.landmark[index].x * width)
+                y = int(face_landmarks.landmark[index].y * height)
+                cv2.circle(image, (x,y), 2, (0,255,0), 2)
             
     
     cv2.imshow("Image", image)
