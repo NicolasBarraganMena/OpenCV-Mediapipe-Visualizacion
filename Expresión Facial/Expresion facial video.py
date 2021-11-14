@@ -102,7 +102,7 @@ with mp_selfie_segmentation.SelfieSegmentation(
                         silueta = cv2.bitwise_and(frame, frame, mask = th)
                         
                         frame = cv2.add(bg, frame)
-                        cv2.putText(frame, 'Enojado', (100,200), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2)
+                        cv2.putText(frame, 'Persona peligrosa detectada!', (100,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
                     '''sorpresa'''
                     if  (d1>30 and d2>30 and d3<78 and d3>46 and d4>20):
                         results2 = selfie_segmentation.process(frame_rgb)
@@ -117,7 +117,7 @@ with mp_selfie_segmentation.SelfieSegmentation(
                         silueta = cv2.bitwise_and(frame, frame, mask = th)
                         
                         frame = cv2.add(bg, frame)
-                        cv2.putText(frame, 'Sorpresa', (100,250), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
+                        cv2.putText(frame, 'Persona peligrosa detectada!', (100,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
                     
             cv2.imshow("Video", frame)
     
