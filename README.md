@@ -5,3 +5,7 @@ _Con una sensación de seguridad cada vez menor en la población y la poca inten
 ## Autores ✒️
 
 * **Nicolas Alberto Barragan Mena** - *Trabajo Inicial* - [nicolasbarragan](https://github.com/NicolasBarraganMena)
+
+## Presentación 📖
+
+Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Presentación](https://view.genial.ly/618d47cc8a62c50d849b7c9a/presentation-psycho-watch-pitch)
